@@ -1,0 +1,454 @@
+[
+    {
+        "name": "🎬豆瓣",
+        "api": "https://movie.douban.com/j/search_subjects?page_limit=30&page_start={{page-1}}&",
+        "type": 2,
+        "searchable": false,
+        "categories": [
+            {
+                "name": "电视剧",
+                "url": "type=tv&tag=热门"
+            },
+            {
+                "name": "电影",
+                "url": "type=movie&tag=热门"
+            },
+            {
+                "name": "国产剧",
+                "url": "type=tv&tag=国产剧"
+            },
+            {
+                "name": "美剧",
+                "url": "type=tv&tag=美剧"
+            },
+            {
+                "name": "韩剧",
+                "url": "type=tv&tag=韩剧"
+            },
+            {
+                "name": "纪录片",
+                "url": "type=tv&tag=纪录片"
+            },
+            {
+                "name": "豆瓣高分",
+                "url": "type=movie&tag=豆瓣高分"
+            },
+            {
+                "name": "华语",
+                "url": "type=movie&tag=华语"
+            },
+            {
+                "name": "欧美",
+                "url": "type=movie&tag=欧美"
+            },
+            {
+                "name": "韩国",
+                "url": "type=movie&tag=韩国"
+            }
+        ],
+        "list": {
+            "list": "$.subjects",
+            "name": "$.title",
+            "tips": "$.episodes_info",
+            "rate": "$.rate",
+            "doubanId": "$.id",
+            "doubanUrl": "$.url",
+            "coverUrl": "$.cover",
+            "detailUrl": "$.url"
+        },
+        "detail": {
+            "meta": "#info@html"
+        }
+    },
+    {
+        "name": "🎬厂长",
+        "api": "https://www.czys.pro",
+        "type": 2,
+        "searchable": 0,
+        "categories": [
+            {
+                "name": "推荐",
+                "url": "/movie_bt/page/{{page}}"
+            },
+            {
+                "name": "电视剧",
+                "url": "/movie_bt/movie_bt_series/dianshiju/page/{{page}}"
+            },
+            {
+                "name": "电影",
+                "url": "/movie_bt/movie_bt_series/dyy/page/{{page}}"
+            },
+            {
+                "name": "动漫",
+                "url": "/movie_bt/movie_bt_series/dohua/page/{{page}}"
+            },
+            {
+                "name": "国产剧",
+                "url": "/movie_bt/movie_bt_series/guochanju/page/{{page}}"
+            },
+            {
+                "name": "美剧",
+                "url": "/movie_bt/movie_bt_series/mj/page/{{page}}"
+            },
+            {
+                "name": "韩剧",
+                "url": "/movie_bt/movie_bt_series/hj/page/{{page}}"
+            },
+            {
+                "name": "华语电影",
+                "url": "/movie_bt/movie_bt_series/huayudianying/page/{{page}}"
+            },
+            {
+                "name": "欧美电影",
+                "url": "/movie_bt/movie_bt_series/meiguodianying/page/{{page}}"
+            },
+            {
+                "name": "印度电影",
+                "url": "/movie_bt/movie_bt_series/yindudianying/page/{{page}}"
+            }
+        ],
+        "list": {
+            "list": ".bt_img.mi_ne_kd li",
+            "name": "h3.0@text",
+            "tips": ".jidi.0@text",
+            "coverUrl": "img.0@data-original",
+            "detailUrl": "a.0@href"
+        },
+        "detail": {
+            "meta": ".moviedteail_list@html"
+        },
+        "play": {
+            "list": ".paly_list_btn a",
+            "name": "text",
+            "url": "href"
+        }
+    },
+    {
+        "name": "🎬金牌",
+        "api": "https://www.hhduc.com",
+        "type": 2,
+        "searchable": true,
+        "discoverable": false,
+        "search": {
+            "url": "/vod/search/{{key}}",
+            "list": ".content-card > a",
+            "name": ".title.0@text",
+            "tips": ".bottom > div.0@text",
+            "detailUrl": "href"
+        },
+        "detail": {
+            "meta": ".director,.item-top@html"
+        },
+        "play": {
+            "list": ".listitem a",
+            "name": "text",
+            "url": "href"
+        }
+    },
+    {
+        "name": "🎬豪华",
+        "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8"
+    },
+    {
+        "name": "🎬黑木耳",
+        "api": "https://json.heimuer.tv/api.php/provide/vod/"
+    },
+    {
+        "name": "🎬光速",
+        "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/"
+    },
+    {
+        "name": "🎬魔都",
+        "api": "https://caiji.moduapi.cc/api.php/provide/vod/from/modum3u8/"
+    },
+    {
+        "name": "🎬卧龙",
+        "api": "https://collect.wolongzyw.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🎬iKun",
+        "api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/"
+    },
+    {
+        "name": "🎬非凡",
+        "api": "https://cj.ffzyapi.com/api.php/provide/vod/from/ffm3u8/"
+    },
+    {
+        "name": "🎬飞速",
+        "api": "https://www.feisuzyapi.com/api.php/provide/vod/from/fsm3u8/"
+    },
+    {
+        "name": "🎬量子",
+        "api": "https://cj.lziapi.com/api.php/provide/vod/",
+        "searchable": false
+    },
+    {
+        "name": "🎬红牛",
+        "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+        "searchable": false
+    },
+    {
+        "name": "🎬快看",
+        "api": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan/",
+        "searchable": false
+    },
+    {
+        "name": "🎬暴风",
+        "api": "https://bfzyapi.com/api.php/provide/vod/from/bfzym3u8/",
+        "searchable": false
+    },
+    {
+        "name": "🎬快车",
+        "api": "https://caiji.kczyapi.com/api.php/provide/vod/from/kcm3u8/",
+        "searchable": false
+    },
+    {
+        "name": "🎬新浪",
+        "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
+        "searchable": false
+    },
+    {
+        "name": "🎬乐视",
+        "api": "https://leshiapi.com/api.php/provide/vod/from/leshi/",
+        "searchable": false
+    },
+    {
+        "name": "🎬索尼",
+        "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
+        "searchable": false
+    },
+    {
+        "name": "📙乐阅读",
+        "type": 10,
+        "api": "https://www.27k.net",
+        "key": "www.27k.net",
+        "categories": [
+            {
+                "name": "玄幻小说",
+                "url": "/sort/1/{{page}}.html"
+            },
+            {
+                "name": "都市小说",
+                "url": "/sort/2/{{page}}.html"
+            },
+            {
+                "name": "历史小说",
+                "url": "/sort/3/{{page}}.html"
+            },
+            {
+                "name": "科幻小说",
+                "url": "/sort/4/{{page}}.html"
+            },
+            {
+                "name": "悬疑小说",
+                "url": "/sort/5/{{page}}.html"
+            },
+            {
+                "name": "网游小说",
+                "url": "/sort/6/{{page}}.html"
+            },
+            {
+                "name": "穿越小说",
+                "url": "/sort/7/{{page}}.html"
+            },
+            {
+                "name": "现代言情",
+                "url": "/sort/15/{{page}}.html"
+            },
+            {
+                "name": "古代言情",
+                "url": "/sort/16/{{page}}.html"
+            },
+            {
+                "name": "豪门总裁",
+                "url": "/sort/17/{{page}}.html"
+            },
+            {
+                "name": "青春校园",
+                "url": "/sort/18/{{page}}.html"
+            },
+            {
+                "name": "其他类别",
+                "url": "/sort/8/{{page}}.html"
+            },
+            {
+                "name": "总排行榜",
+                "url": "/rank/allvisit/"
+            },
+            {
+                "name": "月排行榜",
+                "url": "/rank/monthvisit/"
+            },
+            {
+                "name": "周排行榜",
+                "url": "/rank/weekvisit/"
+            },
+            {
+                "name": "收藏榜单",
+                "url": "/rank/goodnum/"
+            }
+        ],
+        "detail": {
+            "tocUrl": "text.完整目录@href",
+            "intro": "head > meta[property=\"og:description\"]@content",
+            "category": "head > meta[name=\"og:novel:category\"]@content",
+            "tips": "head > meta[name=\"og:novel:latest_chapter_name\"]@content"
+        },
+        "content": {
+            "content": "class.txtnav@p@html##网站地址统一.*阅读记录可.*抱歉....|使用默认浏览.*添加到主屏幕哦~"
+        },
+        "search": {
+            "list": "class.newbox@li||id.article_list_content@li",
+            "name": "h3@text",
+            "author": "class.labelbox@tag.label.0@text",
+            "detailUrl": "h3@tag.a.0@href",
+            "intro": "class.ellipsis_2@text",
+            "tips": "class.zxzj@p@a@text",
+            "coverUrl": "img@src",
+            "url": "https://so.27k.net/search/",
+            "method": "POST",
+            "post": "searchkey={{key}}&searchtype=all"
+        },
+        "toc": {
+            "list": "id.chapterList@li",
+            "name": "a@text",
+            "url": "a@href"
+        }
+    },
+    {
+        "name": "📙中华典藏",
+        "type": 10,
+        "api": "https://www.zhonghuadiancang.com",
+        "categories": [
+            {
+                "name": "佛学宝典",
+                "url": "/foxuebaodian/"
+            },
+            {
+                "name": "儒理哲学",
+                "url": "/rulizhexue/"
+            },
+            {
+                "name": "历史传记",
+                "url": "/lishizhuanji/"
+            },
+            {
+                "name": "诗词戏曲",
+                "url": "/shicixiqu/"
+            },
+            {
+                "name": "文学艺术",
+                "url": "/wenxueyishu/"
+            },
+            {
+                "name": "玄学五术",
+                "url": "/xuanxuewushu/"
+            },
+            {
+                "name": "学术杂记",
+                "url": "/xueshuzaji/"
+            },
+            {
+                "name": "天文地理",
+                "url": "/tianwendili/"
+            },
+            {
+                "name": "类书文集",
+                "url": "/leishuwenji/"
+            },
+            {
+                "name": "外国名著",
+                "url": "/waiguomingzhu/"
+            }
+        ],
+        "detail": {
+            "coverUrl": ".fmpic > img@src",
+            "category": ".alert > a@text"
+        },
+        "content": {
+            "content": "#content@html"
+        },
+        "list": {
+            "list": "tbody > tr",
+            "name": "a.0@text",
+            "detailUrl": "a.0@href",
+            "author": "a.1@text"
+        },
+        "search": {
+            "list": "tbody > tr",
+            "name": "a.0@text",
+            "detailUrl": "a.0@href",
+            "author": "a.1@text",
+            "url": "/e/search/index.php",
+            "post": "tbname=bookname&show=title,writer&tempid=1&keyboard={{key}}"
+        },
+        "toc": {
+            "list": "#booklist a",
+            "name": "text",
+            "url": "href"
+        }
+    },
+    {
+        "name": "📙看漫画",
+        "type": 12,
+        "api": "https://m.kanman.com",
+        "categories": [
+            {
+                "name": "人气",
+                "url": "/api/getsortlist/?comic_sort=&orderby=click&search_type=&search_key=&page={{page}}&size=48"
+            },
+            {
+                "name": "更新",
+                "url": "/api/getsortlist/?comic_sort=&orderby=date&search_type=&search_key=&page={{page}}&size=48"
+            },
+            {
+                "name": "评分",
+                "url": "/api/getsortlist/?comic_sort=&orderby=score&search_type=&search_key=&page={{page}}&size=48"
+            },
+            {
+                "name": "收藏",
+                "url": "/api/getsortlist/?comic_sort=&orderby=shoucang&search_type=&search_key=&page={{page}}&size=48"
+            },
+            {
+                "name": "推理",
+                "url": "/api/getsortlist/?comic_sort=tuili&orderby=&search_type=&search_key=&page={{page}}&size=48"
+            },
+            {
+                "name": "冒险",
+                "url": "/api/getsortlist/?comic_sort=maoxian&orderby=&search_type=&search_key=&page={{page}}&size=48"
+            }
+        ],
+        "detail": {
+            "category": "[property=\"og:novel:category\"]@content",
+            "tocUrl": "/api/getchapterlist?product_id=1&productname=kmh&platformname=wap&comic_id={{$.comic_id}}"
+        },
+        "content": {
+            "content": "$.data.current_chapter.chapter_img_list"
+        },
+        "list": {
+            "list": "$.data.data",
+            "author": "$.comic_author",
+            "detailUrl": "/{{$.comic_id}}/",
+            "tips": "$.latest_cartoon_topic_name",
+            "coverUrl": "https://image.yqmh.com/mh/{{$.comic_id}}.jpg-300x400.webp",
+            "name": "$.comic_name",
+            "params": "{\"comic_id\":{{$.comic_id}}}"
+        },
+        "search": {
+            "author": "$.cartoon_author_list_name",
+            "list": "$.data",
+            "detailUrl": "/{{$.comic_id}}/",
+            "coverUrl": "https://image.yqmh.com/mh/{{$.comic_id}}.jpg-300x400.webp",
+            "intro": "$.cartoon_desc",
+            "category": "$.comic_type##[a-zA-Z]|\\|",
+            "name": "$.comic_name",
+            "params": "{\"comic_id\":{{$.comic_id}}}",
+            "url": "/api/serachcomic/?product_id=1&productname=kmh&platformname=wap&serachKey={{key}}&topNumber=10"
+        },
+        "toc": {
+            "list": "$.data",
+            "name": "$.chapter_name",
+            "url": "/api/getchapterinfov2?product_id=1&productname=kmh&platformname=wap&comic_id={{$.comic_id}}&chapter_newid={{$.chapter_newid}}&isWebp=1&quality=low"
+        }
+    }
+]
